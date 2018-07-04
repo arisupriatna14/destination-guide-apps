@@ -1,0 +1,70 @@
+<%- include('./partial/header/header-index.ejs') -%>
+  <br>
+  <br>
+  <div class="jumbotron jumbotron-fluid" style="background-image: url('https://images.unsplash.com/photo-1440694997168-8ae4033554c7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5830c2ffa85a9270872a6ff0371f047b&auto=format&fit=crop&w=1489&q=80'); width: 100%; height: 100%;">
+    <div class="container">
+      <br>
+      <br>
+      <center>
+        <img src="https://www.kontrakhukum.com/images/partner-logo/Hacktiv8.png" width="20%" alt="">
+        <h1 class="display-4 text-white">Welcome to My Project</h1>
+        <h3 class="text-white">Expressjs, Sequelize, CRUD, MVC, Postgress, Javascript</h3>
+        <h4 class="text-white">Ari Supriatna</h4>
+      </center>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-5 col-md-12 col-sm-12">
+
+        <div class="card">
+
+          <div class="card-header text-center" style="background-color: #FBC02D">
+            <h4>Register</h4>
+          </div>
+
+          <% if (errorMessage.length !== 0) { %>
+            <div class="alert alert-danger" role="alert">
+              <%= errorMessage %>
+            </div>
+          <% } %>
+
+          <div class="card-body">
+            <form action="/signup" method="POST">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" placeholder="Enter username" name="username">
+              </div>
+              <div class="form-group">
+                <label for="fistName">First Name</label>
+                <input type="text" class="form-control" placeholder="Enter first name" name="first_name">
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" placeholder=" Enter last Name" name="last_name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" placeholder="Enter email" name="email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" placeholder="Enter password" name="password">
+              </div>
+              <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modalSuccess">
+                Register
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <%- include('./partial/footer/footer.ejs') -%>

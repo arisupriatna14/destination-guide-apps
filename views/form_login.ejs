@@ -1,0 +1,34 @@
+<%- include('./partial/header/header-index.ejs') -%>
+  <br><br><br>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-5 col-md-12 col-sm-12">
+
+        <div class="card">
+
+          <div class="card-header text-center" style="background-color: #FBC02D">
+            <h4>Login</h4>
+          </div>
+          <div class="card-body">
+            <form action="/login" method="POST">
+              <div class="form-group">
+                <label for="username">Email</label>
+                <input type="text" class="form-control" placeholder="Enter username" name="email">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" placeholder="Enter password" name="password">
+              </div>
+              <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modalSuccess">
+                Register
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br>
+
+  <%- include('./partial/footer/footer.ejs') -%>

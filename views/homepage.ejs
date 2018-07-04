@@ -1,0 +1,20 @@
+<%- include('./partial/header/header-homepage.ejs') -%>
+<br><br><br>
+<div class="container">
+  <div class="row">
+    <% image.forEach(gambar => { %>
+      <div class="col-lg-4 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="card-header"><%= gambar.name_destination %></div>
+          <img src="<%= gambar.image %>" class="card-img-top" alt="">
+          <div class="card-body">
+            <a href="/destination/destination-show/<%= gambar.id %>" class="btn btn-primary">Show</a>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+  <br>
+<br><br><br>
+<%- include('./partial/footer/footer.ejs') -%>

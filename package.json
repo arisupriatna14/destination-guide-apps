@@ -1,0 +1,32 @@
+{
+  "name": "pair-project-phase1",
+  "version": "1.0.0",
+  "description": "destination guide apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon app.js",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arisupriatna14/destination-guide-apps.git"
+  },
+  "keywords": [
+    "destination",
+    "app"
+  ],
+  "author": "arisupriatna, muhammaddawi, wisnu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arisupriatna14/destination-guide-apps/issues"
+  },
+  "homepage": "https://github.com/arisupriatna14/destination-guide-apps#readme",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "pg": "^7.4.3",
+    "sequelize": "^4.38.0",
+    "sequelize-cli": "^4.0.0"
+  }
+}
