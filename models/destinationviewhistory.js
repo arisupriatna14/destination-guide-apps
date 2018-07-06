@@ -6,6 +6,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   DestinationViewHistory.associate = function(models) {
     // associations can be defined here
+    DestinationViewHistory.belongsTo(models.User)
+    DestinationViewHistory.belongsTo(models.Destination)
   };
   return DestinationViewHistory;
 };

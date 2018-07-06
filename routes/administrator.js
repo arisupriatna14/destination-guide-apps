@@ -147,6 +147,7 @@ routes.get('/manage-data-order', (req,res) => {
   })
   .then(dataOrderWithUser => {
     res.send(dataOrderWithUser)
+    res.render('orders', {dataOrderWithUser: dataOrderWithUser})
   })
 })
 
