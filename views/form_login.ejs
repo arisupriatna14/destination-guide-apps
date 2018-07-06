@@ -1,7 +1,17 @@
 <%- include('./partial/header/header-index.ejs') -%>
   <br>
   <br>
-  <br>
+  <div class="jumbotron jumbotron-fluid" style="background-image: url('https://images.unsplash.com/photo-1440694997168-8ae4033554c7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5830c2ffa85a9270872a6ff0371f047b&auto=format&fit=crop&w=1489&q=80'); width: 100%; height: 100%;">
+    <div class="container">
+      <br>
+      <br>
+      <center>
+        <img src="https://www.kontrakhukum.com/images/partner-logo/Hacktiv8.png" width="20%" alt="">
+        <h1 class="display-4 text-white">Welcome to Our Project</h1>
+        <h4 class="text-white">Ari Supriatna, Muhammad Dawi, Wisnu</h4>
+      </center>
+    </div>
+  </div>
   <div class="container">
     <div class="row">
 
@@ -17,23 +27,23 @@
             <div class="alert alert-danger" role="alert">
               <%= errorMessage %>
             </div>
-          <% } %>
-          
-          <div class="card-body">
-            <form action="/home" method="POST">
-              <div class="form-group">
-                <label for="username">Email</label>
-                <input type="text" class="form-control" placeholder="Enter username" name="email">
+            <% } %>
+
+              <div class="card-body">
+                <form action="/home" method="POST">
+                  <div class="form-group">
+                    <label for="username">Email</label>
+                    <input type="text" class="form-control" placeholder="Enter username" name="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" placeholder="Enter password" name="password">
+                  </div>
+                  <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modalSuccess">
+                    Login
+                  </button>
+                </form>
               </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" placeholder="Enter password" name="password">
-              </div>
-              <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modalSuccess">
-                Login
-              </button>
-            </form>
-          </div>
         </div>
       </div>
     </div>
