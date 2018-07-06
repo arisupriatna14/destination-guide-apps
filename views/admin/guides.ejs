@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Guides Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+
+    /* Remove the jumbotron's default bottom margin */
+     .jumbotron {
+      margin-bottom: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="/administrator/">Home</a></li>
+          <li><a href="/administrator/destinations">Destinations</a></li>
+          <li class="active"><a href="/administrator/<%= destinationId %>/guides">Guide by Destination</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="container">
+        <h3>Guides by Destination</h3>
+        <br/>
+        <br/>
+    </div>
+    <div class="w-50 p-3">
+      <table class="table table-hover table-bordered">
+        <thead>
+          <tr>
+            <th scope="col md-6">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Schedule</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (guides.length !== 0) { %>
+            <% guides.forEach(guide => { %>
+              <tr>
+                <th scope="row"> <%= guide.id %> </th>
+                <td> <%= guide.name %> </td>
+                <td> <%= guide.schedule %> </td>
+                <td><a href="/administrator/<%= guide.id%>/guide-edit">Edit</a> | <a href="/administrator/<%= guide.id%>/guide-delete">Delete</a></td>
+              </tr>
+              <% }) %>
+            <% } %>
+            </tbody>
+          </table>
+      <div class="container">
+          <a href="/administrator/<%= destinationId %>/guide-add" type="button" class="btn btn-primary btn-sm">Add Guide</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

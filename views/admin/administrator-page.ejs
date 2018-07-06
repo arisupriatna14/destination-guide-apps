@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Administrator Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+
+    /* Remove the jumbotron's default bottom margin */
+     .jumbotron {
+      margin-bottom: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/home">HOME</a>
+        </li>
+        <li>
+          <a href="/logout">Logout</a>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+      </ul>
+    </div>
+  </div>
+
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading text-center"><h4>DESTINATIONS</h4></div>
+        <div class="panel-body"><img src="https://images.unsplash.com/photo-1484544808355-8ec84e534d75?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fc1407c2a550b0ebf3def8b81fa7b4a2&auto=format&fit=crop&w=2866&q=80" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">
+            <a href="/administrator/destinations" type="button" class="btn btn-primary btn-lg btn-block">Manage</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading text-center"><h4>ORDERS</h4></div>
+        <div class="panel-body"><img src="https://images.unsplash.com/photo-1513908957990-b2790723edbf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2bf9c59279da903776e18e6968e8d581&auto=format&fit=crop&w=1950&q=80" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">
+            <a href="/administrator/manage-data-order" type="button" class="btn btn-primary btn-lg btn-block">Manage</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading text-center"><h4>USERS</h4></div>
+        <div class="panel-body"><img src="https://images.unsplash.com/photo-1521710385092-ffb18195a459?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eb3acf37817cb8ac64708b3726a3d777&auto=format&fit=crop&w=800&q=60" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">
+            <a href="/administrator/manage-data-user" type="button" class="btn btn-primary btn-lg btn-block">Manage</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+
+</body>
+</html>

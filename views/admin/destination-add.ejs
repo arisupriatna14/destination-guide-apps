@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Administrator Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+
+    /* Remove the jumbotron's default bottom margin */
+     .jumbotron {
+      margin-bottom: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="/administrator/">Home</a></li>
+          <li><a href="/administrator/destinations">Destinations</a></li>
+          <li class="active"><a href="/administrator/destination-add">Add Destinations</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+      <h3>From Create New Destination</h3>
+      <br/>
+      <br/>
+  </div>
+  <% if (errorMessage.length !== 0) { %>
+    <div class=" container alert alert-danger">
+        <strong>Process Failed!</strong> <%= errorMessage %>
+    </div>
+  <% } %>
+  <div class="container">
+    <form action="/administrator/destination-add" method="post">
+      <div class="form-group">
+        <label for="name">Name Destination</label>
+        <input type="text" class="form-control" name="name_destination" placeholder="type name .." required>
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" name="harga" placeholder="type price .." required>
+      </div>
+      <div class="form-group">
+        <label for="harga_guide">Price Guide</label>
+        <input type="text" class="form-control" name="harga_guide" placeholder="type price guide">
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" class="form-control" name="city" placeholder="type city .." required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" rows="5" name="description" placeholder="type description .."></textarea>
+      </div>
+      <div class="form-group">
+        <label for="maps">Maps</label>
+        <input type="text" class="form-control" name="maps" placeholder="give me maps url of the destination.." required>
+      </div>
+      <div class="form-group">
+        <label for="image">Image</label>
+        <input type="text" class="form-control" name="image" placeholder="give me destination image url .." required>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31725.985491411324!2d106.8037759726008!3d-6.296785551479163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f200fc450367%3A0xbcc4aad326d293e7!2sRagunan%2C+Pasar+Minggu%2C+South+Jakarta+City%2C+Jakarta!5e0!3m2!1sen!2sid!4v1530831401885" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->

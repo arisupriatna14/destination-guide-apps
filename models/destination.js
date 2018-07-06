@@ -4,10 +4,22 @@ module.exports = (sequelize, DataTypes) => {
     name_destination: DataTypes.STRING,
     harga: DataTypes.INTEGER,
     image: DataTypes.STRING,
-    city: DataTypes.STRING
+    city: DataTypes.STRING,
+    harga_guide: DataTypes.INTEGER,
+    maps: DataTypes.STRING,
+    description: DataTypes.STRING
   }, {});
   Destination.associate = function(models) {
-    // associations can be defined here
+    Destination.belongsToMany(models.User, {
+      through: models.DestinationViewHistory
+    })
+    Destination.hasMany(models.DestinationViewHistory)
+    Destination.hasMany(models.Guide)
   };
+
+  Destination.getTotal = function(harga_destinasi, harga_guide, cb) {
+    return harga_destinasi + harga_guide;
+  }
+
   return Destination;
 };

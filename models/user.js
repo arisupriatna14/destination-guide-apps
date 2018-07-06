@@ -8,7 +8,8 @@ module.exports = (sequelize, DataTypes) => {
     last_name: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    salt: DataTypes.STRING
+    salt: DataTypes.STRING,
+    role: DataTypes.INTEGER
   }, {});
 
   User.beforeCreate((user, Option) => {
@@ -21,6 +22,10 @@ module.exports = (sequelize, DataTypes) => {
 
   User.associate = function(models) {
     // associations can be defined here
+    User.belongsToMany(models.Destination, {
+      through: models.DestinationViewHistory
+    })
+    User.hasMany(models.DestinationViewHistory)
   };
   return User;
 };

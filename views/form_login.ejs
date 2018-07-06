@@ -1,5 +1,7 @@
 <%- include('./partial/header/header-index.ejs') -%>
-  <br><br><br>
+  <br>
+  <br>
+  <br>
   <div class="container">
     <div class="row">
 
@@ -10,8 +12,15 @@
           <div class="card-header text-center" style="background-color: #FBC02D">
             <h4>Login</h4>
           </div>
+
+          <% if (errorMessage != null) { %>
+            <div class="alert alert-danger" role="alert">
+              <%= errorMessage %>
+            </div>
+          <% } %>
+          
           <div class="card-body">
-            <form action="/login" method="POST">
+            <form action="/home" method="POST">
               <div class="form-group">
                 <label for="username">Email</label>
                 <input type="text" class="form-control" placeholder="Enter username" name="email">
@@ -21,7 +30,7 @@
                 <input type="password" class="form-control" placeholder="Enter password" name="password">
               </div>
               <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modalSuccess">
-                Register
+                Login
               </button>
             </form>
           </div>
@@ -29,6 +38,9 @@
       </div>
     </div>
   </div>
-  <br><br><br><br>
+  <br>
+  <br>
+  <br>
+  <br>
 
   <%- include('./partial/footer/footer.ejs') -%>

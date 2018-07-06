@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>Register</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body style="padding: 50px 0px">
+  <div class="container">
+    <h2>Register User Form</h2>
+  </div>
+  <div class="container">
+    <form action="/register" method="post">
+      <br/>
+      <% if (errorMessage.length !== 0) { %>
+          <div class="alert alert-danger" role="alert">
+              <%= errorMessage %>
+          </div>
+      <% } %>
+      <div class="form-group">
+        <label for="username">User Name</label>
+        <input type="text" class="form-control" name="username" placeholder="type your username .." required>
+      </div>
+      <div class="form-group">
+        <label for="firstname">fistname</label>
+        <input type="text" class="form-control" name="first_name" placeholder="type your firstname .." required>
+      </div>
+      <div class="form-group">
+        <label for="lastname">lastname</label>
+        <input type="text" class="form-control" name="last_name" placeholder="type your lastname .." required>
+      </div>
+      <div class="form-group">
+        <label for="email">email</label>
+        <input type="email" class="form-control" name="email" placeholder="type your email address .." required>
+      </div>
+      <div class="form-group">
+        <label for="password">password</label>
+        <input type="password" class="form-control" name="password">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

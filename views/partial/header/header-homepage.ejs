@@ -10,6 +10,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
   <title>Destination Guide - Treasure Fox</title>
 </head>
@@ -21,18 +22,18 @@
     </button>
     <a class="navbar-brand text-white" href="#">Destination Guide</a>
 
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <div class="collapse navbar-collapse navbar-right" id="navbarTogglerDemo03">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
-          <a class="nav-link text-white" href="/">Home
+          <a class="nav-link text-white" href="/home">Home
             <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a href="/user" class="nav-link text-white"><%= username %></a>
+          <a href="#" class="nav-link text-white"><%= username %></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="/logout/<%= id %>">Logout</a>
+          <a class="nav-link text-white" href="/logout/">Logout</a>
         </li>
       </ul>
     </div>
