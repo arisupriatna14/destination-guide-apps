@@ -71,12 +71,9 @@ routes.get("/:destinationId/guide-add", (req, res) => {
     errorMessage: errorMessage,
     destinationId: req.params.destinationId
   });
-  // res.send('success')
 });
 
 routes.post("/:destinationId/guide-add", (req, res) => {
-  console.log('--- guide add');
-  
   Guide.create({
     name: req.body.name,
     kuota: req.body.kuota,

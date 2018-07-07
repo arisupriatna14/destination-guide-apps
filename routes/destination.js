@@ -5,8 +5,8 @@ const nodemailer = require('nodemailer')
 var smtpTransport = nodemailer.createTransport({
   service: "Gmail",
   auth: {
-      user: "supriatnaarie24@gmail.com",
-      pass: "arisupriatna990814"
+      user: "EMAIL",
+      pass: "PASSWORD"
   }
 });
 
@@ -80,22 +80,6 @@ router.post('/order/:id', (req, res) => {
     // res.send(totalOrder)
     // console.log(totalOrder)
   })
-})
-
-router.post('', (req, res) => {
-  
-})
-
-router.post('', (req, res) => {
-  
-})
-
-router.post('', (req, res) => {
-  
-})
-
-router.post('', (req, res) => {
-  
 })
 
 module.exports = router
